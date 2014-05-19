@@ -1,0 +1,63 @@
+\ProvidesPackage{beamerthemeRedPoster} % this style was created by Jorge Herrera and is an adaptation of the RJH theme by Rob J Hyndman, which in turn is an adaptation of i6dv by David Vilar
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectcolormodel{RGB}
+%\selectcolormodel{cmyk}
+%\selectcolormodel{HTML}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usetheme{JorgehPoster}
+
+
+
+% CCRMA colors (RGB)
+% defined arbitrarily by Jorge H.
+\definecolor{headerBackground}{RGB}{157,34,40}
+\definecolor{authorAndInstitution}{RGB}{252,229,166}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{almostBlack}{RGB}{50,50,50}
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{blockHeadingBackground}{HTML}{CF6D34}
+\definecolor{mainBackground}{HTML}{F7F7F7}
+\definecolor{alertColor}{HTML}{2D8AD6}
+
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=headerBackground}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=authorAndInstitution}
+\setbeamercolor{institute in headline}{fg=authorAndInstitution}
+\setbeamercolor{logo in headline}{fg=black,bg=mainBackground}
+\setbeamercolor{separation line}{bg=blockHeadingBackground}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=authorAndInstitution,bg=headerBackground}
+\setbeamerfont{footline}{size=\normalsize}
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=almostBlack,bg=mainBackground}
+
+% block environment
+\setbeamercolor*{block body}{bg=white,fg=almostBlack}
+\setbeamercolor*{block title}{fg=white,bg=blockHeadingBackground}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+
+\setbeamercolor{alerted text}{use={headline},fg=alertColor}
+
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+
+\setbeamercolor{enumerate item}{use={headline},fg=headerBackground}
+
+%\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize item}{\raisebox{0.25ex}{$\scriptstyle\blacktriangleright$}\hskip+.01em}
+%\setbeamercolor{itemize item}{use={headline},fg=alertColor}
+\setbeamercolor{itemize item}{use={headline},fg=headerBackground}
+
+\setbeamertemplate{caption}[numbered]
+\setbeamercolor{caption name}{use={headline},fg=headerBackground}
+

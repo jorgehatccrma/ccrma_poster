@@ -1,0 +1,89 @@
+\ProvidesPackage{beamerthemeSUPoster} % this style was created by Jorge Herrera and is an adaptation of the RJH theme by Rob J Hyndman, which in turn is an adaptation of i6dv by David Vilar
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectcolormodel{RGB}
+%\selectcolormodel{cmyk}
+%\selectcolormodel{HTML}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usetheme{JorgehPoster}
+
+
+% SU colors (RGB)
+% values obtained from http://www.stanford.edu/group/identity/ug_color.html
+\definecolor{cardinal}{RGB}{164,0,29}
+\definecolor{sandstone}{RGB}{231,209,154}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{pantone445}{RGB}{67,74,68}
+\definecolor{pantone465}{RGB}{208,167,96}
+\definecolor{pantone405}{RGB}{60,54,35}
+\definecolor{pantone403}{RGB}{145,136,115}
+\definecolor{pantone401}{RGB}{194,183,161}
+\definecolor{pantone7527}{RGB}{237,232,221}
+\definecolor{pantone5665}{RGB}{214,221,211}
+
+%% SU colors (cmyk)
+%% values obtained from http://www.stanford.edu/group/identity/ug_color.html
+%\definecolor{cardinal}{cmyk}{0,1,0.65,0.34}
+%\definecolor{sandstone}{cmyk}{0.08,0.30,0.56,0}
+%\definecolor{black}{cmyk}{0,0,0,1}
+%\definecolor{white}{cmyk}{0,0,0,0}
+%\definecolor{pantone445}{cmyk}{0.15,0,0.11,0.69}
+%\definecolor{pantone465}{cmyk}{0.18,0.30,0.56,0}
+%\definecolor{pantone405}{cmyk}{0,0.11,0.38,0.76}
+%\definecolor{pantone403}{cmyk}{0,0.06,0.18,0.43}
+%\definecolor{pantone401}{cmyk}{0,0.06,0.15,0.23}
+%\definecolor{pantone7527}{cmyk}{0,0.02,0.06,0.07}
+%\definecolor{pantone5665}{cmyk}{0.06,0,0.06,0.11}
+
+
+%% SU colors (HTML)
+%% values obtained from http://www.stanford.edu/group/identity/ug_color.html
+%\definecolor{cardinal}{HTML}{990000}
+%\definecolor{sandstone}{HTML}{E7D19A}
+%\definecolor{black}{HTML}{000000}
+%\definecolor{white}{HTML}{FFFFFF	}
+%\definecolor{pantone445}{HTML}{434A44}
+%\definecolor{pantone465}{HTML}{D0A760}
+%\definecolor{pantone405}{HTML}{3C3623}
+%\definecolor{pantone403}{HTML}{918873}
+%\definecolor{pantone401}{HTML}{C2B7A1}
+%\definecolor{pantone7527}{HTML}{EDE8DD}
+%\definecolor{pantone5665}{HTML}{D6DDD3}
+
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=cardinal}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=sandstone}
+\setbeamercolor{institute in headline}{fg=sandstone}
+\setbeamercolor{logo in headline}{fg=black,bg=pantone7527}
+\setbeamercolor{separation line}{bg=pantone465}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=sandstone,bg=cardinal}
+\setbeamerfont{footline}{size=\normalsize}
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=black,bg=pantone7527}
+
+% block environment
+\setbeamercolor*{block body}{bg=white,fg=black}
+\setbeamercolor*{block title}{fg=sandstone,bg=pantone405}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+
+\setbeamercolor{alerted text}{use={headline},fg=headline.bg}
+
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamercolor{itemize item}{use={headline},fg=headline.bg}
+\setbeamercolor{caption name}{use={headline},fg=headline.bg}
+
+

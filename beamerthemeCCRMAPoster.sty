@@ -1,0 +1,62 @@
+\ProvidesPackage{beamerthemeCCRMAPoster} % this style was created by Jorge Herrera and is an adaptation of the RJH theme by Rob J Hyndman, which in turn is an adaptation of i6dv by David Vilar
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectcolormodel{RGB}
+%\selectcolormodel{cmyk}
+%\selectcolormodel{HTML}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usetheme{JorgehPoster}
+
+
+% CCRMA colors (RGB)
+% defined arbitrarily by Jorge H.
+\definecolor{ccrmaBlue}{RGB}{39,70,109}
+\definecolor{lightPurple}{RGB}{215,224,228}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{almostBlack}{RGB}{50,50,50}
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{darkBlue}{RGB}{11,40,81}
+\definecolor{lightAlmostGray}{RGB}{224,222,223}
+\definecolor{alertColor}{RGB}{236, 105, 25}
+
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=ccrmaBlue}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=lightPurple}
+\setbeamercolor{institute in headline}{fg=lightPurple}
+\setbeamercolor{logo in headline}{fg=black,bg=lightAlmostGray}
+\setbeamercolor{separation line}{bg=darkBlue}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=lightPurple,bg=ccrmaBlue}
+\setbeamerfont{footline}{size=\normalsize}
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=almostBlack,bg=lightAlmostGray}
+
+% block environment
+\setbeamercolor*{block body}{bg=white,fg=almostBlack}
+\setbeamercolor*{block title}{fg=white,bg=ccrmaBlue}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+
+\setbeamercolor{alerted text}{use={headline},fg=alertColor}
+
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+
+\setbeamercolor{enumerate item}{use={headline},fg=darkBlue}
+
+%\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize item}{\raisebox{0.25ex}{$\scriptstyle\blacktriangleright$}\hskip+.01em}
+%\setbeamercolor{itemize item}{use={headline},fg=alertColor}
+\setbeamercolor{itemize item}{use={headline},fg=ccrmaBlue}
+
+\setbeamertemplate{caption}[numbered]
+\setbeamercolor{caption name}{use={headline},fg=darkBlue}
+

@@ -1,0 +1,219 @@
+\documentclass[final]{beamer}
+\usefonttheme[onlymath]{serif}
+
+% \usetheme{SUPoster}
+\usetheme{CCRMAPoster}
+% \usetheme{RedPoster}
+% \usetheme{GreenPoster}
+
+
+\usepackage[orientation=landscape,size=a0,scale=1.6]{beamerposter}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+
+\usepackage{lmodern} % needed to make math mode fonts scale properly
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{bold-extra}
+
+
+
+\usepackage{enumitem}
+% \setitemize[1]{label=$\blacktriangleright$}
+% \setlist[itemize,1]{label=$\blacktriangleright$}
+
+\setlist[itemize]{label=\usebeamerfont*{itemize item}%
+  \usebeamercolor[fg]{itemize item}
+  \usebeamertemplate{itemize item},
+  leftmargin=2em}
+
+% next line is necessary to make beamer and enumitem play nicely together (see http://tex.stackexchange.com/questions/45921/make-enumerate-have-beamer-themes-when-using-enumitem/45950#45950)
+\setlist[enumerate]{leftmargin=2.2em,%
+label=\protect\usebeamerfont{enumerate item}%
+    \protect\usebeamercolor[fg]{enumerate item}%
+    \insertenumlabel. }
+
+
+
+
+%% DOCUMENT DATA
+
+\title{The Title}
+\subtitle{And the subtitle}
+
+\author{Author 1 \and Author 2}
+\institute{Center for Computer Research in Music and Acoustics - Stanford University}
+
+\logoleft{\begin{center} \includegraphics[height=8cm]{images/SU_Seal_Blk_pos.eps}\end{center}}
+\logoright{\begin{center} \includegraphics[height=2.5cm]{images/ccrma-complete-mod1.pdf}\end{center}}
+
+\footer{The Conference Name, The Place - The Date \hfill \url{http://ccrma.stanford.edu/}}
+\date{}
+
+
+
+
+
+\begin{document}
+
+
+\definecolor{almostWhite}{RGB}{240,240,240}
+\definecolor{lightGray}{RGB}{220,220,220}
+\definecolor{tbllinecolor}{RGB}{200,200,200}
+\beamertemplateshadingbackground{lightGray}{almostWhite}
+\newcommand{\vltbl}{{\color{tbllinecolor}\vrule}}
+
+
+\begin{frame}[fragile]{}
+
+% centralize columns layout
+\newcommand{\vstart}{11.5}
+\newcommand{\vstartCols}{20.5}
+\newcommand{\fullwidth}{114.5}  % this is the key to the values below
+\newcommand{\lcolwidth}{30}
+\newcommand{\mcolwidth}{50.5}
+\newcommand{\rcolwidth}{30}
+\newcommand{\firstcolpos}{2}
+\newcommand{\secondcolpos}{34}
+\newcommand{\thirdcolpos}{86.5}
+\newcommand{\bottomblockstart}{70.3}
+\newcommand{\mainfigwidth}{900}
+
+\newenvironment{paddedBlock}[2][0.95\linewidth]
+    {\begin{block}{#2}\begin{minipage}{#1}}
+    {\end{minipage}\end{block}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TOP ROW
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{\fullwidth}(2,\vstart)
+\begin{paddedBlock}[\linewidth]{Wide Block}
+
+Here you could add some nice figures or something eye-catching
+
+\end{paddedBlock}
+\end{textblock}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LEFT COLUMN
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{\lcolwidth}(\firstcolpos,\vstartCols)
+
+\begin{paddedBlock}{Left Column 1}
+
+\begin{itemize}
+\item A
+\item Fake
+\item List
+\end{itemize}
+
+
+\end{paddedBlock}
+
+
+\begin{paddedBlock}{Left Column 2}
+
+\begin{description}
+\item[Two-step solution:]\hfill
+    % \vspace{0.5cm}
+    \begin{enumerate}
+    \item Think about it
+    \item Do it
+    \end{enumerate}
+\end{description}
+
+\vspace{1cm}
+
+\alert{Check out these equations!}
+
+\begin{align}
+1 &= \cos(2\pi) + j\sin(2\pi) \\
+  &= e^{-j2\pi}
+\end{align}
+
+\end{paddedBlock}
+
+
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MIDDLE COLUMN
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{\mcolwidth}(\secondcolpos,\vstartCols)
+
+\begin{paddedBlock}{Middle Column 1}
+
+I run out of ideas \ldots
+
+\end{paddedBlock}
+
+\begin{paddedBlock}{Middle Column 2}
+
+\ldots still waiting
+
+\end{paddedBlock}
+
+
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RIGHT COLUMN
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{\rcolwidth}(\thirdcolpos,\vstartCols)
+
+
+\begin{paddedBlock}{Right Column 1}
+
+And that's a wrap!
+
+\end{paddedBlock}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\textbf{\normalsize References}
+\bibliographystyle{plain}
+% \bibliographystyle{apalike}
+% \nocite{*}
+\bibliography{references}
+
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BOTTOM 3 COLUMN BLOCK
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{textblock}{\fullwidth}(2,\bottomblockstart)
+\begin{paddedBlock}[0.98\linewidth]{Finally}
+
+In case you need it, you can do this too
+
+\end{paddedBlock}
+\end{textblock}
+
+\end{frame}
+
+
+
+
+
+\end{document}
