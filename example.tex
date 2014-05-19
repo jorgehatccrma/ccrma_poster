@@ -68,6 +68,17 @@ label=\protect\usebeamerfont{enumerate item}%
 
 \begin{frame}[fragile]{}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANT:
+%   Here is where you define your poster's layout params (widths and
+%   vertical positions).
+%   Feel free to add/remove more, to make your layout fit your needs
+%
+%   All dimensions are in cm (I think).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % centralize columns layout
 \newcommand{\vstart}{11.5}
 \newcommand{\vstartCols}{20.5}
@@ -79,15 +90,28 @@ label=\protect\usebeamerfont{enumerate item}%
 \newcommand{\secondcolpos}{34}
 \newcommand{\thirdcolpos}{86.5}
 \newcommand{\bottomblockstart}{70.3}
-\newcommand{\mainfigwidth}{900}
 
+
+% this will add some padding to the blocks, to avoid text reaching
+% the border (looks bad)
 \newenvironment{paddedBlock}[2][0.95\linewidth]
     {\begin{block}{#2}\begin{minipage}{#1}}
     {\end{minipage}\end{block}}
 
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% And now ... the content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% TOP ROW
+%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{textblock}{\fullwidth}(2,\vstart)
@@ -198,8 +222,12 @@ And that's a wrap!
 
 \end{textblock}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%
-%% BOTTOM 3 COLUMN BLOCK
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BOTTOM ROW
+%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{textblock}{\fullwidth}(2,\bottomblockstart)
